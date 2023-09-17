@@ -1,0 +1,38 @@
+// SuperDepartment.java (Superclass)
+public class SuperDepartment {
+    public String departmentName() {
+        return "Super Department";
+    }
+
+    public String getTodaysWork() {
+        return "No Work as of now";
+    }
+
+    public String getWorkDeadline() {
+        return "Nil";
+    }
+
+    public String isTodayAHoliday() {
+        return "Today is not a holiday";
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        HRDepartment hrDepartment = new HRDepartment();
+        ITDepartment itDepartment = new ITDepartment();
+
+        System.out.println("HR Department:");
+        System.out.println("Department Name: " + hrDepartment.departmentName());
+        System.out.println("Today's Work: " + hrDepartment.getTodaysWork());
+        System.out.println("Work Deadline: " + hrDepartment.getWorkDeadline());
+        System.out.println("Today's Holiday Status: " + hrDepartment.isTodayAHoliday());
+
+        System.out.println("\nIT Department:");
+        System.out.println("Department Name: " + itDepartment.departmentName());
+        System.out.println("Today's Work: " + itDepartment.getTodaysWork());
+        System.out.println("Work Deadline: " + itDepartment.getWorkDeadline());
+        System.out.println("Today's Holiday Status: " + itDepartment.isTodayAHoliday());
+    }
+}
